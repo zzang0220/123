@@ -13,7 +13,7 @@ screen = pygame.display.set_mode((screen_width, screen_height))
 pygame.display.set_caption("똥피하기")
 
 # 배경음악
-pygame.mixer.music.load("C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/music/Game 1.mp3")
+pygame.mixer.music.load("pygame/music/Game 1.mp3")
 pygame.mixer.music.play(-1)
 
 # 시계
@@ -21,19 +21,19 @@ clock = pygame.time.Clock()
 
 # 스테이지 정보
 stages = {
-    1: {"background": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/st1z.png", "background_music": "pygame/music/Game 1.mp3", "character_speed": 0.3, "enemy_speed": 20, "army_speed": 10,
-        "score_limit": 4, "enemy_image": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/ddongg.png", "army_image": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/army1.png"},
-    2: {"background": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/st2z.png", "background_music": "pygame/music/Game 2.mp3", "character_speed": 0.3, "enemy_speed": 20, "army_speed": 10,
-        "score_limit": 8, "enemy_image": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/ddongg.png", "army_image": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/army2.png"},
-    3: {"background": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/st3z.png", "background_music": "pygame/music/Game 3.mp3", "character_speed": 0.3, "enemy_speed": 20, "army_speed": 10,
-        "score_limit": 12, "enemy_image": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/ddongg.png", "army_image": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/army3.png"},
-    4: {"background": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/st4z.png", "background_music": "pygame/music/Game 4.mp3", "character_speed": 0.3, "enemy_speed": 20, "army_speed": 10,
-        "score_limit": 16, "enemy_image": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/ddongg.png", "army_image": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/army4.png"},
-    5: {"background": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/st5z.png", "background_music": "pygame/music/Game 5.mp3", "character_speed": 0.3, "enemy_speed": 20, "army_speed": 10,
-        "score_limit": 20, "enemy_image": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/ddongg.png", "army_image": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/army5.png"},
-    6: {"background": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/stFz.png", "background_music": "pygame/music/Game 6.mp3", "character_speed": 0.3, "enemy_speed": 20, "army_speed": 10,
-        "score_limit": 24, "enemy_image": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/ddongg.png", "army_image": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/army6.png"},
-    7: {"background": "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/end_background.png", "background_music": "pygame/music/Game 1.mp3", "character_speed": 0.3, "enemy_speed": 0, "army_speed": 0,
+    1: {"background": "pygame/image/st1z.png", "background_music": "pygame/music/Game 1.mp3", "character_speed": 0.3, "enemy_speed": 20, "army_speed": 10,
+        "score_limit": 4, "enemy_image": "pygame/image/ddongg.png", "army_image": "pygame/image/army1.png"},
+    2: {"background": "pygame/image/st2z.png", "background_music": "pygame/music/Game 2.mp3", "character_speed": 0.3, "enemy_speed": 20, "army_speed": 10,
+        "score_limit": 8, "enemy_image": "pygame/image/ddongg.png", "army_image": "pygame/image/army2.png"},
+    3: {"background": "pygame/image/st3z.png", "background_music": "pygame/music/Game 3.mp3", "character_speed": 0.3, "enemy_speed": 20, "army_speed": 10,
+        "score_limit": 12, "enemy_image": "pygame/image/ddongg.png", "army_image": "pygame/image/army3.png"},
+    4: {"background": "pygame/image/st4z.png", "background_music": "pygame/music/Game 4.mp3", "character_speed": 0.3, "enemy_speed": 20, "army_speed": 10,
+        "score_limit": 16, "enemy_image": "pygame/image/ddongg.png", "army_image": "pygame/image/army4.png"},
+    5: {"background": "pygame/image/st5z.png", "background_music": "pygame/music/Game 5.mp3", "character_speed": 0.3, "enemy_speed": 20, "army_speed": 10,
+        "score_limit": 20, "enemy_image": "pygame/image/ddongg.png", "army_image": "pygame/image/army5.png"},
+    6: {"background": "pygame/image/stFz.png", "background_music": "pygame/music/Game 6.mp3", "character_speed": 0.3, "enemy_speed": 20, "army_speed": 10,
+        "score_limit": 24, "enemy_image": "pygame/image/ddongg.png", "army_image": "pygame/image/army6.png"},
+    7: {"background": "pygame/image/end_background.png", "background_music": "pygame/music/Game 1.mp3", "character_speed": 0.3, "enemy_speed": 0, "army_speed": 0,
         "score_limit": 100, "enemy_image": None, "army_image": None}
 }
 
@@ -68,10 +68,10 @@ army_y_pos = 0
 game_started = False
 
 # 배경 이미지
-background_image = pygame.image.load("C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/start_screen_background.png")
+background_image = pygame.image.load("pygame/image/start_screen_background.png")
 
 # 스타트 버튼 이미지
-start_button_image = pygame.image.load("C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/start_button.png")
+start_button_image = pygame.image.load("pygame/image/start_button.png")
 start_button_rect = start_button_image.get_rect()
 start_button_rect.center = (screen_width // 2, screen_height // 2)
 
@@ -79,10 +79,10 @@ start_button_rect.center = (screen_width // 2, screen_height // 2)
 game_over = False
 
 # 게임 오버 음악
-game_over_music = pygame.mixer.Sound("C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/music/losing.wav")
+game_over_music = pygame.mixer.Sound("pygame/music/losing.wav")
 
 # 캐릭터
-character = pygame.image.load("C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/man2.png")
+character = pygame.image.load("pygame/image/man2.png")
 character_size = character.get_rect().size
 character_width = character_size[0]
 character_height = character_size[1]
@@ -101,9 +101,9 @@ enemy_y_pos = 0
 # 특수 아이템 관련 설정
 special_items = []  # 특수 아이템을 저장하는 리스트
 special_item_images = [
-    "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/ice.png",
-    "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/lightning.png",
-    "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/item3.png"
+    "pygame/image/ice.png",
+    "pygame/image/lightning.png",
+    "pygame/image/item3.png"
 ]
 
 # 특수 아이템 떨어지는 간격 (프레임 수)
@@ -131,13 +131,13 @@ def load_special_item():
 def apply_special_item_effect(special_item_path):
     global character_speed, enemy_speed, score, special_item_effect_active, special_item_effect_start_time, special_item_effect_duration
 
-    if special_item_path == "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/ice.png":
+    if special_item_path == "pygame/image/ice.png":
         # 캐릭터 속도 두 배 증가
         character_speed *= 2
-    elif special_item_path == "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/lightning.png":
+    elif special_item_path == "pygame/image/lightning.png":
         # 적 속도 절반 감소
         enemy_speed /= 2
-    elif special_item_path == "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/item3.png":
+    elif special_item_path == "pygame/image/item3.png":
         # 점수 3점 증가
         score += 3
 
@@ -168,21 +168,21 @@ def next_stage():
         game_over = True
 
 # 다음 스테이지 버튼 이미지
-next_stage_button_image = pygame.image.load("C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/next_stage_button.png")
+next_stage_button_image = pygame.image.load("pygame/image/next_stage_button.png")
 next_stage_button_rect = next_stage_button_image.get_rect()
 next_stage_button_rect.center = (screen_width // 2, screen_height // 2)
 
 # 다음 스테이지 화면 배경 이미지
-next_stage_bg_image = pygame.image.load("C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/next_stage_bg.png")
+next_stage_bg_image = pygame.image.load("pygame/image/next_stage_bg.png")
 
 
 
 # 스토리 이미지 파일 경로
 story_images = [
-    "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/story1.png",
-    "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/story2.png",
-    "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/story3.png",
-    "C:/Users/82109/OneDrive/바탕 화면/Python1/repos_python/pygame/image/story4.png"
+    "pygame/image/story1.png",
+    "pygame/image/story2.png",
+    "pygame/image/story3.png",
+    "pygame/image/story4.png"
 ]
 current_story_image_index = 0
 story_image = pygame.image.load(story_images[current_story_image_index])
